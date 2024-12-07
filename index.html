@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicine Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Telemedicine Platform</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Registration Section -->
+    <section id="registration-section">
+        <h2>Register</h2>
+        <form id="patient-registration-form">
+            <h3>Register as a Patient</h3>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="email" id="patient-email" placeholder="Enter your email" required>
+            <input type="password" id="patient-password" placeholder="Enter your password" required>
+            <input type="text" id="medical-history" placeholder="Medical History" required>
+            <input type="text" id="emergency-contact" placeholder="Emergency Contact" required>
+            <button type="submit">Register as Patient</button>
+            <p id="patient-registration-success" style="color: green; display: none;">Registration Successful! You can now log in.</p>
+        </form>
+
+        <form id="doctor-registration-form">
+            <h3>Register as a Doctor</h3>
+            <input type="text" id="doctor-name" placeholder="Enter your name" required>
+            <input type="email" id="doctor-email" placeholder="Enter your email" required>
+            <input type="password" id="doctor-password" placeholder="Enter your password" required>
+            <input type="text" id="specialty" placeholder="Enter your medical specialty" required>
+            <textarea id="education" placeholder="Education history (e.g., MBBS, MD)" required></textarea>
+            <textarea id="work-experience" placeholder="Work experience (e.g., 5 years at XYZ Hospital)" required></textarea>
+            <label for="doctor-cv">Upload CV:</label>
+            <input type="file" id="doctor-cv" accept=".pdf,.doc,.docx" required>
+            <input type="text" id="doctor-location" placeholder="Location (auto-detected)" readonly required>
+            <button type="button" id="detect-location">Detect Location</button>
+            <button type="submit">Register as Doctor</button>
+        </form>
+        
+
+        <!-- <form id="admin-registration-form">
+            <h3>Register as Admin</h3>
+            <input type="text" id="admin-name" placeholder="Enter your name" required>
+            <input type="email" id="admin-email" placeholder="Enter your email" required>
+            <input type="password" id="admin-password" placeholder="Enter your password" required>
+            <button type="submit">Register as Admin</button>
+            <p id="admin-registration-success" style="color: green; display: none;">Registration Successful! You can now log in.</p>
+        </form> -->
+    </section>
+
+    <!-- Login Section -->
+    <section id="login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Enter your email" required>
+            <input type="password" id="login-password" placeholder="Enter your password" required>
+            <button type="submit">Login</button>
+            <p id="login-error-message" style="color: red; display: none;">Invalid credentials. Please try again.</p>
+            <div class="forgot-password">
+                <a href="#" id="forgot-password-link">Forgot Password?</a>
+            </div>
+        </form>
+        <h3>Not a member? <a href="#registration-section">Register Now</a></h3>
+    </section>
+
+    <!-- Dashboard Sections (Initially Hidden) -->
+    <section id="admin-dashboard" style="display: none;">
+        <h2>Welcome, Admin</h2>
+        <!-- Admin Dashboard Content -->
+    </section>
+
+    <section id="patient-dashboard" style="display: none;">
+        <h2>Welcome, Patient</h2>
+        <!-- Patient Dashboard Content -->
+    </section>
+
+    <section id="doctor-dashboard" style="display: none;">
+        <h2>Welcome, Doctor</h2>
+        <!-- Doctor Dashboard Content -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Telemedicine Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
